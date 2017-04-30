@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+current-context: cluster.local
+preferences: {}
+clusters:
+- cluster:
+    certificate-authority: /opt/spinnaker/config/ca-kubernetes.crt
+    server: https://10.0.174.12:443
+  name: cluster.local
+contexts:
+- context:
+    cluster: cluster.local
+    user: kubelet
+  name: cluster.local
+users:
+- name: kubelet
+  user:
+    client-certificate: /opt/spinnaker/config/kubelet-client.crt
+    client-key: /opt/spinnaker/config/kubelet-client.key

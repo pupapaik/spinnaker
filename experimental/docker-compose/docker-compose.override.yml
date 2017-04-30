@@ -3,12 +3,13 @@ clouddriver:
     - "../../config:/opt/spinnaker/config"
     - "../../config/aws:/root/.aws"
     - "../../config/gcp:/root/.gcp"
+    - "../../config/kubernetes:/root/.kube"
 echo: 
   volumes: 
     - "../../config:/opt/spinnaker/config"
-#deck:
+#deck: 
 #  volumes: 
-#    - "../../config/settings.js:/deck/settings.js"
+#    - "../../config:/opt/spinnaker/config"
 front50: 
   volumes: 
     - "../../config:/opt/spinnaker/config"

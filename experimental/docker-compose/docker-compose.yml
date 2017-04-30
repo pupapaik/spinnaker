@@ -10,6 +10,9 @@ clouddriver:
     - redis
   ports:
     - "7002:7002"
+  extra_hosts:
+  - "kubernetes.default:172.19.72.93"
+  - "kubernetes.default.svc:172.19.72.93"
 deck:
   container_name: deck
   environment:
@@ -50,6 +53,7 @@ gate:
     - SERVICES_IGOR_HOST=igor
     - SERVICES_ORCA_HOST=orca
     - SERVICES_ROSCO_HOST=rosco
+    - "SERVICES_GATE_HOST=$DOCKER_IP"
   image: quay.io/spinnaker/gate:master
   links:
     - redis

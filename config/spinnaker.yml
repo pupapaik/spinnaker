@@ -18,7 +18,7 @@ services:
     # (clouddriver, gate, etc) at once, but not external systems (jenkins, etc).
     # Individual systems can still be overridden using their own section entry
     # directly under 'services'.
-    host: localhost
+    host: 10.0.175.89
     protocol: http
 
   clouddriver:

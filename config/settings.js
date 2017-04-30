@@ -45,7 +45,7 @@
  */
 
 window.spinnakerSettings = {
-  gateUrl: gateUrl,
+  gateUrl: "http://10.0.175.89:8084",
   bakeryDetailUrl: gateUrl + '/bakery/logs/global/{{context.status.id}}',
   authEndpoint: gateUrl + '/auth/user',
   pollSchedule: 30000,
