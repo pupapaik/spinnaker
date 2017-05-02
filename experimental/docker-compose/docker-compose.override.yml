@@ -4,6 +4,7 @@ clouddriver:
     - "../../config/aws:/root/.aws"
     - "../../config/gcp:/root/.gcp"
     - "../../config/kubernetes:/root/.kube"
+    - "./heat:/opt/heat"
 echo: 
   volumes: 
     - "../../config:/opt/spinnaker/config"
